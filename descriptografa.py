@@ -1,6 +1,6 @@
-import hashlib
+import hashlib # importando biblioteca hash
 
-def gerawordlist():
+def gerawordlist(): # gera a lista de palavras
     wordlist = []
     for word in range(0, 10000):
         if word <= 9:
@@ -13,11 +13,11 @@ def gerawordlist():
             wordlist.append(f'{word}')
     return wordlist
 
-senha = "" # coloque a senha hash aqui
+senha = "fa246d0262c3925617b0c72bb20eeb1d" # recebe a senha hash aqui em hash md5
 
 word_list = gerawordlist()
 
-for numero in word_list:
+for numero in word_list: # para cada numero na lista
     tentativa = hashlib.md5(f"{numero}".encode("utf-8")).hexdigest()
     if tentativa == senha:
         print(f'o hash md5 {tentativa} e equivalente a {numero}')

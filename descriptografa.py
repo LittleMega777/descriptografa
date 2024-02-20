@@ -13,7 +13,7 @@ def gerawordlist():
             wordlist.append(f'{word}')
     return wordlist
 
-senha = "01846ae470651e97d2f73fce979406a9"
+senha = "" # coloque a senha hash aqui
 
 word_list = gerawordlist()
 
